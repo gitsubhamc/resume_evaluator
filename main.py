@@ -4,8 +4,6 @@ from data_extraction import read_resume
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Manager
 
-
-
 def process_resume_with_logging(file_path, token_logger):
     text = read_resume(file_path)
     token_logger.log_tokens(text)
@@ -21,7 +19,7 @@ if __name__ == '__main__':
 
     directory_path = './../resumes'
     resumes = get_all_resumes(directory_path)
-    job_description = "best fit for nlp roles"
+    job_description = "best fit for nlp roles with 5+ years of experience, 100k+ salary, and based in mumbai"
     batch_size = 100
 
     # Process resumes in batches
